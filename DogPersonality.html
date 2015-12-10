@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Dog Personality Test</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src='DogPersonality.js'></script>
+    	<title>The Dog for your Personality</title>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="DogPersonality.js"></script>
+    	<link rel='stylesheet' type='text/css' href='DogPersonality.css'>
     </head>
     <body>
+    	<h1>Find the perfect dog for your personality</h1>
+    	<p>Using the questions below, please select the answer that most reflects you.</p>
+    	<form>
+    		<p>I like to:</p>
+    		<label>Meet new people and take action</label>
+    		<input type="radio" name="extrovert" value="E">
+    		<br>
+    		<label>Reflect on my thoughts and ideas</label>
+    		<input type="radio" name="introvert" value="I">
+
+    		<p>I trust the:</p>
+    		<label>tangible, I love specific details</label>
+    		<input type="radio" name="sensing" value="S">
+    		<br>
+    		<label>abstract, I love to generalize a pattern</label>
+    		<input type="radio" name="intuitive" value="N">
+			
+			<p>I make decisions:</p>
+    		<label>through rational, logical thought</label>
+    		<input type="radio" name="thinking" value="T">
+    		<br>
+    		<label>by getting a feel for the situation and finding concensus</label>
+    		<input type="radio" name="feeling" value="F">
+
+    		<p>I prefer to:</p>
+    		<label>have matters settled</label>
+    		<input type="radio" name="judging" value="J">
+    		<br>
+    		<label>keep decisions open</label>
+    		<input type="radio" name="perceiving" value="P">
+    		<br>
+
+    		<input type="Submit" value="Submit" class="submit">
+
+    	</form>
     </body>
 </html>
