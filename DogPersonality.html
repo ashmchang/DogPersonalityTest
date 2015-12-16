@@ -3,48 +3,62 @@
     <head>
         <title>Dog Personality Test</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src='DogPersonality.js'></script>
+        <script type="text/javascript" src='PupMatch.js'></script>
     <link rel='stylesheet' type='text/css' href='DogPersonality.css'>
     </head>
     <body>
+
     	<h1>WHAT TYPE OF DOG SUITS MY PERSONALITY?</h1>
+        <div id="photoBar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpG7aZdyslopVguR20Bmr7XkJV5f4BoCrjxn5VwdGyivM2zp8OFw" width= "100px" height = "100px">
+            <img src="https://www.petfinder.com/wp-content/uploads/2012/11/106558340-adoptable-deaf-dog-photo-tips-632x475.jpg" width = "110px" height = "100px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKkeEmYt1UNG0qawzJZZ0-RZ7SZmHT3c8hHqCB5WtdQMmBUY8I" width ="100px" height = "100px">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSJ-dVtM26H_8FBA3aeSWuNXAhBIMOcaBA9UrRi7vfxpVFMiXztRFsZ9Q" width = "100px" height = "100px">
+            <img src="http://swellstrategies.com/wp-content/uploads/2015/06/dog-sitting.jpg" width = "100px" height = "100px">
+            <img src="http://www.dognameguide.com/images/dog.gif"width = "100px" height = "100px">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTYLEdMEkiy17b-3t-p67TLiWonazsSdM3XmhL3V8JP1DPV-yJh" width = "100px" height = "100px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoEDfeoGNFgnT5v6y4ar_VhrMeTmSh9hf-befDorN9oeEgC--A_Q" width = "100px" height = "100px">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcShPcUOQ21tLoAfa8qWeutRQi0OpEHbdmCH7Ci9BjTydBRsE-kh" width = "100px" height = "100px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL30Ei1zT1VUOvopw4W1JF5tsM9CFhGwg5bGiqilhoGjUr41Jz" width = "100px" height = "100px">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTinixvH3TdAU8qPN3iQl6Dw61UjHQjK9WktwWgctUiQ7C0e7V5" width = "100px" height = "100px">
     	<h3>Have you always wanted a dog but have a hard time choosing what type of dog to get?  PupMatch can help you!  <br>Fill out the questionnaire below and find out your best match. </h3>
 
         <form>
             <p>I like to:</p>
             <label>Meet new people and take action</label>
-            <input type="radio" name="q1" value="E">
+            <input type="radio" name="q1" value="E" id="q1">
             <br>
             <label>Reflect on my thoughts and ideas</label>
-            <input type="radio" name="q1" value="I">
+            <input type="radio" name="q1" value="I" id="q1">
 
             <p>I trust the:</p>
-            <label>tangible, I love specific details</label>
+            <label>Tangible, I love specific details</label>
             <input type="radio" name="q2" value="S">
             <br>
-            <label>abstract, I love to generalize a pattern</label>
+            <label>Abstract, I love to generalize a pattern</label>
             <input type="radio" name="q2" value="N">
             
             <p>I make decisions:</p>
-            <label>through rational, logical thought</label>
+            <label>Through rational, logical thought</label>
             <input type="radio" name="q3" value="T">
             <br>
-            <label>by getting a feel for the situation and finding concensus</label>
+            <label>By getting a feel for the situation and finding concensus</label>
             <input type="radio" name="q3" value="F">
 
             <p>I prefer to:</p>
-            <label>have matters settled</label>
+            <label>Have matters settled</label>
             <input type="radio" name="q4" value="J">
             <br>
-            <label>keep decisions open</label>
+            <label>Keep decisions open</label>
             <input type="radio" name="q4" value="P">
             <br>
 
             <input type="Submit" value="Submit" class='Submit'>
 
         </form>
+        <p id = "results"><p>
     	
-    	<p id ="INFP">
+    	<!-- <p id ="INFP">
     		<img src="http://petparent.me/wp-content/uploads/2014/05/13527-Sable-Shetland-Sheepdog-Sheltie-white-background.jpg" width = "150" height: "100">
     		<a href="http://www.akc.org/dog-breeds/shetland-sheepdog/"> Shetland Sheepdog</a>  Bright, energetic and playful.  Loyal to the family, but reserve towards strangers. 
     		</p>
@@ -80,19 +94,19 @@
     		<img src="https://upload.wikimedia.org/wikipedia/en/0/07/Home_cocker_spaniel.jpg" width = "150" height: "100">Spaniel</p>
     	
     	<p id ="ISFP"> 
-    		<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Toy_Fox_Terrier_2.jpg" width = "150" height: "100">Toy Fox Terrier</p>
+    		<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Toy_Fox_Terrier_2.jpg" width = "150" height: "100">Toy Fox Terrier</p> -->
 
     	<p id ="ESTJ"> 
     		<img src="http://nextranks.com/data_images/dogs/doberman-pinscher/doberman-pinscher-03.jpg"width = "150" height: "100"><a href="http://www.akc.org/dog-breeds/doberman-pinscher/">Doberman</a> Watchful, fearful, and obedient.</p>
 
-    	<p id ="ESTP"> 
+    	<!-- <p id ="ESTP"> 
     		<img src="http://www.wcrotts.com/Gallery%20Pics/A/Arzadon%20Larimbo/Arzadons%20Larimbo%2017%20months.jpg" width = "150" height: "100"><a href="http://www.akc.org/dog-breeds/rottweiler/">Rotweiler</a> Show-off and affectionate to family, but reserved with strangers</p>
 
     	<p id ="ISTJ"> 
     		<img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Dalmatian-2.jpg" width = "150" height: "100"><a href="http://www.akc.org/dog-breeds/dalmatian/"> Dalmation</a> Stable, outgoing, and dignified.</p>
 
     	<p id ="ISTP"> 
-    		<img src="http://www.yourpurebredpuppy.com/dogbreeds/photos-AB/bullmastiffsf5.jpg" width = "150" height: "100"><a href="http://www.akc.org/dog-breeds/bullmastiff/">Bullmastriff</a> Brave, affectionate, and loyal.</p>
+    		<img src="http://www.yourpurebredpuppy.com/dogbreeds/photos-AB/bullmastiffsf5.jpg" width = "150" height: "100"><a href="http://www.akc.org/dog-breeds/bullmastiff/">Bullmastriff</a> Brave, affectionate, and loyal.</p> -->
 
     </body>
 </html>
