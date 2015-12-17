@@ -37,23 +37,27 @@ $(document).ready(function(){
 
             if (finalresults === 'ENFP'){
                   $('#results').append( intro + finalresults +'<img src="http://imgs.sfgate.com/blogs/images/sfgate/pets/2010/06/11/border_collie3.jpg">' + '<a href="http://www.akc.org/dog-breeds/border-collie/">Border Collie</a> ' +'<p>Extremely energetic, smart, and affectionate.</p>');
-                  dogBreed = Border_Collie
+                  dogBreed = Border+Collie
                   };
 
             if (finalresults === 'ENFJ'){
                   $('#results').append( intro + finalresults +'<img src="http://petparent.me/wp-content/uploads/2014/05/13527-Sable-Shetland-Sheepdog-Sheltie-white-background.jpg">' + '<a href="http://www.akc.org/dog-breeds/shetland-sheepdog/">Shetland Sheepdog</a> ' +'<p>Bright, energetic and playful.  Loyal to the family, but reserved towards strangers.</p>');
+                  dogBreed = Shetland+Sheepdog+Sheltie
                   };
 
             if (finalresults === 'ENTP'){
                   $('#results').append( intro + finalresults +'<img src="http://cf.ltkcdn.net/dogs/images/std/65325-371x324-Great_dane.jpg">' + '<a href="http://www.akc.org/dog-breeds/great-dane/">Great Dane</a> ' +'<p>Friendly, patient, and dependable.</p>');
+                  dogBreed = Great+Dane
                   };
 
             if (finalresults === 'ENTJ'){
                   $('#results').append( intro + finalresults +'<img src="http://www.rarebreed.com/breeds/kelpie/austrailiankelpie.jpg">' + '<a href="http://www.dogbreedinfo.com/australiankelpie.html">Austrialian Kelpie</a> ' +'<p>A compact, robust, and enthusiastic working dog.</p>');
+                  dogBreed = Australian+Kelpie
                   };
 
             if (finalresults === 'ESFP'){
                   $('#results').append( intro + finalresults +'<img src="https://upload.wikimedia.org/wikipedia/en/0/07/Home_cocker_spaniel.jpg">' + '<a href="http://http://www.akc.org/dog-breeds/cocker-spaniel/">Cocker Spaniel</a> ' +'<p>Gentle, happy, and smart.</p>');
+                  dogBreed = 
                   };
 
             if (finalresults === 'ESTJ'){
@@ -106,11 +110,16 @@ $(document).ready(function(){
             $(".animalsNearYou").click(function(){
 
 
-           		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed='+ [var] + 'callback=?')
-          			.done(function(petApiData) { 
-          				console.log("data retrieved: ", petApiData); })
-          			.error(function(err) { alert('Error retrieving data!'); 
-        			});
+        $.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed=' + [dogBreed] + '&callback=?')
+          .done(function(petApiData) { 
+          console.log("data retrieved: ", petApiData);
+          .error(function(err) { alert('Error retrieving data!'); 
+        });
+           // 		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed='+ [var] + 'callback=?')
+          	// 		.done(function(petApiData) { 
+          	// 			console.log("data retrieved: ", petApiData); })
+          	// 		.error(function(err) { alert('Error retrieving data!'); 
+        			// });
 
           	//append to the bottom of the html using object[#]	
             	$("#petfinderAnimals")
