@@ -126,7 +126,10 @@ $(document).ready(function(){
           			.done(function(petApiData) { 
           			console.log("data retrieved: ", petApiData);
           			$('#petfinderAnimals').text(petApiData.petfinder.pets.pet[0].name.$t);
-          			$('#petfinderAnimals').append(petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t);
+
+          			// var petfinderPicture = petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t;
+          			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '/>');
+          			// $('#petfinderAnimals').append(petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t);
           			// .error(function(err) { alert('Error retrieving data!'); 
         		});
 
