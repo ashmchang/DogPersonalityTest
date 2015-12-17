@@ -12,7 +12,9 @@ $(document).ready(function(){
       
       var personalityResults1, personalityResults2, personalityResults3, personalityResults4
       $(".Submit").click(function(event){
+            //prevent send form
             event.preventDefault();
+            //get results from each radio button
             console.log("submit button clicked");
             personalityResults1 = $("input[name='q1']:checked").val();
             console.log("personalityResults: ", personalityResults1);
@@ -23,13 +25,19 @@ $(document).ready(function(){
             personalityResults4 = $("input[name='q4']:checked").val();
             console.log("personalityResults4: ", personalityResults4);
 
+            //create string of results
             var finalresults = personalityResults1 + personalityResults2 + personalityResults3 + personalityResults4;
             console.log(finalresults)
 
+            //var to be filled w/ dogbreed
+            var dogBreed
+
+            //results
             var intro = 'Your Myer-Briggs personality is ';
 
             if (finalresults === 'ENFP'){
-                   $('#results').append( intro + finalresults +'<img src="http://imgs.sfgate.com/blogs/images/sfgate/pets/2010/06/11/border_collie3.jpg">' + '<a href="http://www.akc.org/dog-breeds/border-collie/">Border Collie</a> ' +'<p>Extremely energetic, smart, and affectionate.</p>');
+                  $('#results').append( intro + finalresults +'<img src="http://imgs.sfgate.com/blogs/images/sfgate/pets/2010/06/11/border_collie3.jpg">' + '<a href="http://www.akc.org/dog-breeds/border-collie/">Border Collie</a> ' +'<p>Extremely energetic, smart, and affectionate.</p>');
+                  dogBreed = Border_Collie
                   };
 
             if (finalresults === 'ENFJ'){
@@ -53,7 +61,7 @@ $(document).ready(function(){
                   };
 
             if (finalresults === 'ESTP'){
-                  $('#results').append( intro + finalresults +'<img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Dalmatian-2.jpg">' + '<a href="http://www.akc.org/dog-breeds/dalmatian/">Dalmation</a> ' +'<p>Outgoing, Diginified, Smart.</p>');
+                  $('#results').append( intro + finalresults +'<img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Dalmatian-2.jpg">' + '<a href="http://www.akc.org/dog-breeds/dalmatian/">Dalmatian</a> ' +'<p>Outgoing, Diginified, Smart.</p>');
                   };
 
             if (finalresults === 'ESFJ'){
@@ -81,16 +89,32 @@ $(document).ready(function(){
                   };
 
             if (finalresults === 'ISTJ'){
-                  $('#results').append( intro + finalresults +'<img src="hhttps://s.graphiq.com/sites/default/files/465/media/images/t2/Jack_Russell_Terrier_5687866.jpg">' + '<a href="http://www.dogbreedinfo.com/jackrussellterrier.htm">Jack Russel Terrier</a> ' +'<p>Cheerful, merry, and devoted.</p>');
+                  $('#results').append( intro + finalresults +'<img src="hhttps://s.graphiq.com/sites/default/files/465/media/images/t2/Jack_Russell_Terrier_5687866.jpg">' + '<a href="http://www.dogbreedinfo.com/jackrussellterrier.htm">Jack Russell Terrier</a> ' +'<p>Cheerful, merry, and devoted.</p>');
                   };
 
             if (finalresults === 'ISTP'){
-                  $('#results').append( intro + finalresults +'<img src="http://nextranks.com/data_images/dogs/doberman-pinscher/doberman-pinscher-03.jpg">' + '<a href="http://www.akc.org/dog-breeds/doberman-pinscher/">Doberman</a> ' +'<p>Watchful, fearful, obedient.</p>');
+                  $('#results').append( intro + finalresults +'<img src="http://nextranks.com/data_images/dogs/doberman-pinscher/doberman-pinscher-03.jpg">' + '<a href="http://www.akc.org/dog-breeds/doberman-pinscher/">Doberman Pinscher</a> ' +'<p>Watchful, fearful, obedient.</p>');
                   };
 
-            if (finalresults === 'INTJ'){
+            if (finalresults === 'ISFJ'){
                   $('#results').append( intro + finalresults +'<img src="http://www.wcrotts.com/Gallery%20Pics/A/Arzadon%20Larimbo/Arzadons%20Larimbo%2017%20months.jpg">' + '<a href="http://www.akc.org/dog-breeds/rottweiler/">Rottweiler</a> ' +'<p>Show-off and affectionate to family but reserved to strangers.</p>');
                   };
+
+
+
+            //calling the api
+            $(".animalsNearYou").click(function(){
+
+
+           		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed='+ [var] + 'callback=?')
+          			.done(function(petApiData) { 
+          				console.log("data retrieved: ", petApiData); })
+          			.error(function(err) { alert('Error retrieving data!'); 
+        			});
+
+          	//append to the bottom of the html using object[#]	
+            	$("#petfinderAnimals")
+            }
 
 
       });
