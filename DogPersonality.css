@@ -3,7 +3,7 @@ body {
 	/*background-image: "http://www.yardrocks.com/images/dog14_md.gif";*/
 	background-color: LightCyan;
 	background-position: center;
-
+	font-family: Arial;
 	text-align: center;
 }
 
@@ -12,17 +12,38 @@ h1 {
 	font-weight: bold;
 }
 
-
+h2 {
+	text-align: center;
 }
+
 h3 {
 	text-align: center;
 }
 
 p {
 	font-weight: bold;
-	font-size: 28;
+	font-size: 125%;
+	text-align: left;
+	margin-left: 400px
 }
 
+.DogInfo {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+input {
+	margin-left: 450px;
+}
+
+label {
+	font-size: 100%;
+}
+
+#YButtons {
+	margin-top: 30px;
+}
 
 .Submit{
 	color: Blue;
@@ -32,5 +53,45 @@ p {
 	margin-top: 20px;
 }
 
+.Refresh {
+	color: Blue;
+	font-weight: bolder;
+	font-size: 100%;
+	background-color: Gold;
+	margin-left: 0px;
+}
+
+.animalsNearYou {
+	color: Blue;
+	font-weight: bolder;
+	font-size: 100%;
+	background-color: Gold;
+	margin-left: 0px;
+}
+
+#results {
+	font-size: 125%;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+#resultsPicture{
+	margin-top: 10px;
+}
+
+#resultsPicture img {
+	width: 20%;
+	height: auto;
+}
+
+#linkDog {
+	font-size: 200%;
+	font-color: red;
+	font-weight: bold;
+}
+
+#petfinderResultsPicture{
+	width: 30%;
+}
 .petResultsPictures{
 }

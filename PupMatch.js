@@ -119,7 +119,7 @@ $(document).ready(function(){
           			//append to the bottom
           			$('#petfinderAnimals').append('<h3>' + (petApiData.petfinder.pets.pet[0].name.$t)  + '</h3>');
           			$('#petfinderAnimals').append('<p> currently in '+ (petApiData.petfinder.pets.pet[0].contact.city.$t) + '</p>');
-          			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '/>');
+          			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '</p>');
           			$('#petfinderAnimalsPicture').append('<p> Description: '+ (petApiData.petfinder.pets.pet[0].description.$t) + '</p>');
           			// .error(function(err) { alert('Error retrieving data!');
           			$('#petfinderAnimals2').append('<h3>' + (petApiData.petfinder.pets.pet[1].name.$t)  + '</h3>');

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dog Personality Test</title>
+        <title>PupMatch!</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script type="text/javascript" src='PupMatch.js'></script>
-    <link rel='stylesheet' type='text/css' href='DogPersonality.css'>
+        <link rel='stylesheet' type='text/css' href='DogPersonality.css'>
     </head>
     <body>
 
@@ -21,7 +22,8 @@
             <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcShPcUOQ21tLoAfa8qWeutRQi0OpEHbdmCH7Ci9BjTydBRsE-kh" width = "100px" height = "100px">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL30Ei1zT1VUOvopw4W1JF5tsM9CFhGwg5bGiqilhoGjUr41Jz" width = "100px" height = "100px">
             <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTinixvH3TdAU8qPN3iQl6Dw61UjHQjK9WktwWgctUiQ7C0e7V5" width = "100px" height = "100px">
-    	<h3>Have you always wanted a dog but have a hard time choosing what type of dog to get?  PupMatch can help you!  <br>Fill out the questionnaire below and find out your best match. </h3>
+    	<h3>Pupmatch finds your personality and picks a dog compatible with you!</h3>
+        <p>Pick the answers below that best describe you </p>
 
         <form>
             <p>I like to:</p>
@@ -53,14 +55,16 @@
             <input type="radio" name="q4" value="P">
 
             <br>
-            <input type="Submit" value="Submit" class='Submit'>
+
+            <div id='YButtons'>
+                <input type="Submit" value="Submit" class='Submit'>
+                <input type="button" value="Take this quiz again!" class='Refresh'>
+            </div>
 
         </form>
         <div id = "results"></div>
 
-        <div>
         <input type="Submit" value="See animals near you!" class="animalsNearYou">
-        </div>
 
         <div class = 'petResultsWords' id = "petfinderAnimals"></div>
         <div class = 'petResultsPictures' id = 'petfinderAnimalsPicture'></div>
