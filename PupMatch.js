@@ -1,14 +1,4 @@
 $(document).ready(function(){
-
-
-      // var resultQ1 = function(){
-
-      //       $("#q1").click("#results");
-
-      //       var personalityResults = $("input[name='q1']:checked").val();
-      // }
-      
-      // still need to fix CSS, add the API + create a new variable for each dog to feed the api
       
       var personalityResults1, personalityResults2, personalityResults3, personalityResults4
       $(".Submit").click(function(event){
@@ -125,11 +115,12 @@ $(document).ready(function(){
         		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed=' + [dogBreed] + '&callback=?')
           			.done(function(petApiData) { 
           			console.log("data retrieved: ", petApiData);
+
+          			//append to the bottom
           			$('#petfinderAnimals').append('<h3>' + (petApiData.petfinder.pets.pet[0].name.$t)  + '</h3>');
           			$('#petfinderAnimals').append('<p> currently in '+ (petApiData.petfinder.pets.pet[0].contact.city.$t) + '</p>');
           			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '/>');
           			$('#petfinderAnimalsPicture').append('<p> Description: '+ (petApiData.petfinder.pets.pet[0].description.$t) + '</p>');
-          			// $('#petfinderAnimals').append(petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t);
           			// .error(function(err) { alert('Error retrieving data!');
           			$('#petfinderAnimals2').append('<h3>' + (petApiData.petfinder.pets.pet[1].name.$t)  + '</h3>');
           			$('#petfinderAnimals2').append('<p> currently in '+ (petApiData.petfinder.pets.pet[1].contact.city.$t) + '</p>');
@@ -141,9 +132,6 @@ $(document).ready(function(){
           			$('#petfinderAnimalsPicture3').append('<img src ='+ (petApiData.petfinder.pets.pet[2].media.photos.photo[0].$t) + '/>');
           			$('#petfinderAnimalsPicture3').append('<p> Description: '+ (petApiData.petfinder.pets.pet[2].description.$t) + '</p>');
         		});
-
-          	//append to the bottom of the html using object[#]	
-            	// $("#petfinderAnimals")
             
 
 
@@ -151,18 +139,7 @@ $(document).ready(function(){
 
     
 
-
-      
-
 	});
-      
-
-
-      // $(function(){
-      //       $("#results").click
-      // }
-      // $("#ESTJ").hide();
-      // $("ESTJ").string.show();
 
 
 });
