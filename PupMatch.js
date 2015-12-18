@@ -129,7 +129,14 @@ $(document).ready(function(){
           			$('#petfinderAnimals').append('<p> currently in '+ (petApiData.petfinder.pets.pet[0].contact.city.$t) + '</p>');
           			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '/>');
           			// $('#petfinderAnimals').append(petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t);
-          			// .error(function(err) { alert('Error retrieving data!'); 
+          			// .error(function(err) { alert('Error retrieving data!');
+          			$('#petfinderAnimals2').text(petApiData.petfinder.pets.pet[1].name.$t);
+          			$('#petfinderAnimals2').append('<p> currently in '+ (petApiData.petfinder.pets.pet[1].contact.city.$t) + '</p>');
+          			$('#petfinderAnimalsPicture2').append('<img src ='+ (petApiData.petfinder.pets.pet[1].media.photos.photo[0].$t) + '/>');
+
+          			$('#petfinderAnimals3').text(petApiData.petfinder.pets.pet[2].name.$t);
+          			$('#petfinderAnimals3').append('<p> currently in '+ (petApiData.petfinder.pets.pet[2].contact.city.$t) + '</p>');
+          			$('#petfinderAnimalsPicture3').append('<img src ='+ (petApiData.petfinder.pets.pet[2].media.photos.photo[0].$t) + '/>');
         		});
 
           	//append to the bottom of the html using object[#]	
