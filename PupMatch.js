@@ -125,18 +125,21 @@ $(document).ready(function(){
         		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=ddc7ef71cbc19cde8a016e85f90c9c27&location=94103&animal=dog&breed=' + [dogBreed] + '&callback=?')
           			.done(function(petApiData) { 
           			console.log("data retrieved: ", petApiData);
-          			$('#petfinderAnimals').text(petApiData.petfinder.pets.pet[0].name.$t);
+          			$('#petfinderAnimals').append('<h3>' + (petApiData.petfinder.pets.pet[0].name.$t)  + '</h3>');
           			$('#petfinderAnimals').append('<p> currently in '+ (petApiData.petfinder.pets.pet[0].contact.city.$t) + '</p>');
           			$('#petfinderAnimalsPicture').append('<img src ='+ (petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t) + '/>');
+          			$('#petfinderAnimalsPicture').append('<p> Description: '+ (petApiData.petfinder.pets.pet[0].description.$t) + '</p>');
           			// $('#petfinderAnimals').append(petApiData.petfinder.pets.pet[0].media.photos.photo[0].$t);
           			// .error(function(err) { alert('Error retrieving data!');
-          			$('#petfinderAnimals2').text(petApiData.petfinder.pets.pet[1].name.$t);
+          			$('#petfinderAnimals2').append('<h3>' + (petApiData.petfinder.pets.pet[1].name.$t)  + '</h3>');
           			$('#petfinderAnimals2').append('<p> currently in '+ (petApiData.petfinder.pets.pet[1].contact.city.$t) + '</p>');
           			$('#petfinderAnimalsPicture2').append('<img src ='+ (petApiData.petfinder.pets.pet[1].media.photos.photo[0].$t) + '/>');
+          			$('#petfinderAnimalsPicture2').append('<p> Description: '+ (petApiData.petfinder.pets.pet[1].description.$t) + '</p>');
 
-          			$('#petfinderAnimals3').text(petApiData.petfinder.pets.pet[2].name.$t);
+          			$('#petfinderAnimals3').append('<h3>' + (petApiData.petfinder.pets.pet[2].name.$t) + '</h3>');
           			$('#petfinderAnimals3').append('<p> currently in '+ (petApiData.petfinder.pets.pet[2].contact.city.$t) + '</p>');
           			$('#petfinderAnimalsPicture3').append('<img src ='+ (petApiData.petfinder.pets.pet[2].media.photos.photo[0].$t) + '/>');
+          			$('#petfinderAnimalsPicture3').append('<p> Description: '+ (petApiData.petfinder.pets.pet[2].description.$t) + '</p>');
         		});
 
           	//append to the bottom of the html using object[#]	
